@@ -15,7 +15,7 @@ def write(results, subject):
         for result in results:
             text_file.write("[" + subject + "]" + result)
 
-def crow(url, max, subject):
+def crawling(url, max, subject):
     lists = []
     for i in range(max): 
         lists.append(url + str(i))
@@ -24,13 +24,13 @@ def crow(url, max, subject):
     results = parser.parseURLs()
     write(results, subject)
 
-crow(modu, 10, "modu")
+crawling(modu, 10, "modu")
 print("=========================================")
-crow(iphone, 5, "iphone")
+crawling(iphone, 5, "iphone")
 print("=========================================")
-crow(news, 10, "news")
+crawling(news, 10, "news")
 print("=========================================")
-crow(tips, 5, "tips")
+crawling(tips, 5, "tips")
 print("=========================================")
-crow(use, 5, "use")
+crawling(use, 5, "use")
 
